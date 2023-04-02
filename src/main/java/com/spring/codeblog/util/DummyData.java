@@ -19,7 +19,7 @@ public class DummyData {
     @Autowired
     private CodeblogRepository codeblogRepository;
 
-    //@PostConstruct //tudo que eu colocar aqui dentro deste metodo sera executado conforme nossa aplicação for subindo
+//    @PostConstruct //tudo que eu colocar aqui dentro deste metodo sera executado conforme nossa aplicação for subindo
     public void savePosts(){
         List<Post> postList = new ArrayList<>();
 
@@ -27,13 +27,13 @@ public class DummyData {
         post1.setAuthor("Michelli Brito");
         post1.setDate(LocalDate.now());
         post1.setTitle("Dcoker");
-        post1.setTexto("Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aspernatur commodi consequatur, doloribus dolorum eius eum hic illo ipsam iste itaque nemo officiis placeat quasi rem sapiente unde voluptate. Praesentium!");
+        post1.setText("Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aspernatur commodi consequatur, doloribus dolorum eius eum hic illo ipsam iste itaque nemo officiis placeat quasi rem sapiente unde voluptate. Praesentium!");
 
         Post post2 = new Post();
         post2.setAuthor("Michelli Brito");
         post2.setDate(LocalDate.now());
         post2.setTitle("API REST");
-        post2.setTexto("Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aspernatur commodi consequatur, doloribus dolorum eius eum hic illo ipsam iste itaque nemo officiis placeat quasi rem sapiente unde voluptate. Praesentium!");
+        post2.setText("Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aspernatur commodi consequatur, doloribus dolorum eius eum hic illo ipsam iste itaque nemo officiis placeat quasi rem sapiente unde voluptate. Praesentium!");
 
 //        postList.addAll(Arrays.asList(post1, post2));
         postList.add(post1);

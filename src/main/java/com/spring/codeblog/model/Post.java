@@ -20,7 +20,7 @@ public class Post {
     private LocalDate date;
     @NotBlank
     @Lob //aceitar textos grandes
-    private String texto;
+    private String text;
 
     public Long getId() {
         return id;
@@ -54,11 +54,11 @@ public class Post {
         this.date = date;
     }
 
-    public String getTexto() {
-        return texto;
+    public String getText() {
+        return text;
     }
 
-    public void setTexto(String texto) {
-        this.texto = texto;
+    public void setText(String text) {
+        this.text = text;
     }
 }
