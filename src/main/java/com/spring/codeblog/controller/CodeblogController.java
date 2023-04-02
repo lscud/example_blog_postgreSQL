@@ -17,9 +17,9 @@ public class CodeblogController {
 
     @GetMapping(value = "/posts")
     public ModelAndView getPosts(){
-        ModelAndView mv = new ModelAndView("posts");
+        ModelAndView mv = new ModelAndView("posts"); //MVN ->model view anda controller. model -> Post, view -> pagina html, controller -> CodeblogController
         List<Post> posts = codeblogService.findAll();
-        mv.addObject("posts", posts);
+        mv.addObject("list_posts", posts);  //quando for acessar a view la no html para renderizar, vou buscar essa palavra posts (atributo), porque dentro dessa palavra estarão meus posts;
         return mv;
 
     }

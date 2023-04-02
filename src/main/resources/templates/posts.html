@@ -24,7 +24,7 @@
                 </ol>
             </nav>
 
-            <div class="card shadow-sm bg-white rounded" style="margin-top: 20px;" th:each="post : ${posts}">
+            <div class="card shadow-sm bg-white rounded" style="margin-top: 20px;" th:each="post : ${list_posts}">
                 <div class="card-body">
                     <p class="card-subtitle mb-2 text-muted" style="font-size: 0.8rem;">
                         <span th:text="${post.author}"></span>
