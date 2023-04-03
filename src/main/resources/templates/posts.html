@@ -30,8 +30,11 @@
                         <span th:text="${post.author}"></span>
                         <span th:text="${post.date}"></span>
                     </p>
-                    <a href="#" style="text-decoration: none;">
-                        <h4 class="card-title" style="font-weight: bold; color: black; padding-top: 5px;"><span th:text="${post.title}"></span></h4>
+<!--                    <a th:href="@{/getPostDetails(postId=${post.id})}">-->
+                    <a th:href="${(#mvc.url('CC#getPostDetails').arg(0, post.id)).build()}">
+                        <h4 class="card-title" style="font-weight: bold; color: black; padding-top: 5px;">
+                            <span th:text="${post.title}"></span>
+                        </h4>
                     </a>
                     <p class="card-text" ><span th:utext="${#strings.abbreviate(post.text,400)}"></span></p>
                 </div>
