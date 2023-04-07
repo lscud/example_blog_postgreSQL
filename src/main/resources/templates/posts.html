@@ -33,6 +33,9 @@
                         <span th:text="${post.date}"></span>
                     </p>
 <!--                    <a th:href="@{/getPostDetails(postId=${post.id})}">-->
+<!--                    Qdo clicar no titulo tenho que gerar uma url que irá solicitar um get com id para o psot especifico
+                        para isso usaremos esse #mvc.url para construir a uri sintaxe:
+                        #mvc.url('siglas do controller # metodo que receberá a requisição').arg(0, id do post).build()-->
                     <a th:href="${(#mvc.url('CC#getPostDetails').arg(0, post.id)).build()}" style="text-decoration: none;">
                         <h4 class="card-title" style="font-weight: bold; color: black; padding-top: 5px;">
                             <span th:text="${post.title}"></span>

@@ -26,7 +26,7 @@ public class CodeblogController {
     public ModelAndView getPosts(){
         ModelAndView mv = new ModelAndView("posts"); //MVN ->model view anda controller. model -> Post, view -> pagina html, controller -> CodeblogController
         List<Post> posts = codeblogService.findAll();
-        mv.addObject("list_posts", posts);  //quando for acessar a view la no html para renderizar, vou buscar essa palavra posts (atributo), porque dentro dessa palavra estarão meus posts;
+        mv.addObject("list_posts", posts);  //quando for acessar a view la no html para renderizar, vou buscar essa palavra list_posts (atributo), porque dentro dessa palavra estarão meus posts;
         return mv;
 
     }
@@ -35,7 +35,7 @@ public class CodeblogController {
     public ModelAndView getPostDetails(@PathVariable("id") long id){
         ModelAndView mv = new ModelAndView("postDetail"); //MVN ->model view anda controller. model -> Post, view -> pagina html, controller -> CodeblogController
         Post post = codeblogService.findById(id);
-        mv.addObject("post", post);  //quando for acessar a view la no html para renderizar, vou buscar essa palavra posts (atributo), porque dentro dessa palavra estarão meus posts;
+        mv.addObject("post", post);  //quando for acessar a view la no html para renderizar, vou buscar essa palavra post (atributo), porque dentro dessa palavra estarão meus posts;
         return mv;
 
     }
