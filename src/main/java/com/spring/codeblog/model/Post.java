@@ -4,11 +4,13 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
+import java.io.Serializable;
 import java.time.LocalDate;
+import java.util.List;
 
 @Entity
 @Table(name="TB_POST")
-public class Post {
+public class Post implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
@@ -21,6 +23,8 @@ public class Post {
     @NotBlank
     @Lob //aceitar textos grandes
     private String text;
+
+
 
     public Long getId() {
         return id;
